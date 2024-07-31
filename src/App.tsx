@@ -7,7 +7,7 @@ import Register from "./views/Register/Register";
 function App() {
   return (
     <>
-      <Memberships />
+      <Admin />
     </>
   );
 }
