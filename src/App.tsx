@@ -10,7 +10,7 @@ import Register from "./views/Register/Register";
 function App() {
   return (
     <>
-      <Contact />
+      <About />
     </>
   );
 }
