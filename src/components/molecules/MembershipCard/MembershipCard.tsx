@@ -1,6 +1,5 @@
 import React from "react";
 import "./MembershipCard.css";
-import "boxicons";
 import PriceLabel from "../../atoms/PriceLabel/PriceLabel";
 
 interface IMembershipCard {
