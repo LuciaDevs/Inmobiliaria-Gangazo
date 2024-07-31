@@ -1,0 +1,45 @@
+.nav-bar__container {
+  display: flex;
+  padding: 12px 28px 0;
+}
+
+.nav-bar__container {
+  width: 100%;
+}
+
+.nav-bar__logo-container {
+  width: 20%;
+}
+
+.nav-bar__logo {
+  max-width: 100px;
+}
+
+.nav-bar__nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 80%;
+}
+
+.nav-bar__link {
+  padding: 0px 38px;
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.current--link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.current--link span {
+  width: 30%;
+  height: 4px;
+  background-color: #ffc46e;
+  border-radius: 2px;
+}
