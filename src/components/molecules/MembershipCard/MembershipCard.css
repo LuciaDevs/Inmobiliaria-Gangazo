@@ -9,7 +9,6 @@
   padding: 22px 38px;
   border: 2px solid #fff;
   border-radius: 12px;
-  height: 100%;
 }
 
 .membership--offer {
@@ -28,6 +27,10 @@
 
 .premium {
   height: 90%;
+}
+
+.gold {
+  height: 100%;
 }
 
 .gold .membership--offer {

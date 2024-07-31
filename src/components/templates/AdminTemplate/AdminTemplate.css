@@ -1,4 +1,6 @@
 .admin-container {
+  display: flex;
+  flex-direction: column;
   background-image: linear-gradient(#05050566 1%, transparent 99%),
     url("/images/afternoon.png");
   background-size: cover;
@@ -9,19 +11,64 @@
 
 .admin__wrapper {
   display: flex;
-  margin-top: 110px;
   padding: 0 32px;
   gap: 64px;
-  height: 40%;
 }
 
 .admin__settings {
   width: 50%;
+  padding-right: 200px;
+}
+
+.admin__input-label {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.admin__settings .form-input__container {
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
+.city + .form-input__container {
+  width: 45%;
 }
 
 .admin__membership {
+  display: flex;
+  flex-direction: column;
   width: 50%;
+}
+
+.admin__membership-title {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.admin__membership-content {
+  flex: 1;
   display: flex;
   padding-right: 200px;
+  padding-left: 22px;
   gap: 48px;
+}
+
+.admin__membership-content p {
+  font-size: 1.1em;
+  width: 160%;
+}
+
+.admin__membership-content .gold {
+  height: auto;
+}
+
+.admin__membership-content .gold .membership--offer {
+  font-size: 3.5em;
+}
+
+.admin__payments {
+  flex: 1;
+  margin: 32px 160px 16px;
 }
