@@ -1,6 +1,9 @@
 .nav-bar__container {
+  position: fixed;
   display: flex;
   padding: 12px 28px 0;
+  z-index: 10;
+  background: linear-gradient(#050505aa 10%, transparent 90%);
 }
 
 .nav-bar__container {
