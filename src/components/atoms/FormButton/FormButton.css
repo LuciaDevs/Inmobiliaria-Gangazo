@@ -5,16 +5,11 @@
 }
 
 .form-button__button {
-  font-size: 1.3em;
+  font-size: 1.2em;
   cursor: pointer;
   padding: 12px;
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 192, 108, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  border: 2px solid #fff;
+  color: #050505;
+  background-color: rgba(249, 192, 108, 1);
   border-radius: 6px;
   width: 40%;
   min-width: 130px;
