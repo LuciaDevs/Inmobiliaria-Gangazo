@@ -1,0 +1,35 @@
+.membership-card__container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: #0006;
+  padding: 22px 38px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  height: 100%;
+}
+
+.membership--offer {
+  color: #ffc46e;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 5em;
+  transform: translate(+40%, -40%);
+  display: none;
+}
+
+.basic {
+  height: 80%;
+}
+
+.premium {
+  height: 90%;
+}
+
+.gold .membership--offer {
+  display: block;
+}

@@ -1,0 +1,24 @@
+.register-form__container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: #0006;
+  padding: 22px 38px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+}
+
+.register-form__logo {
+  max-width: 160px;
+}
+
+.register-form__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+.form-button__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-button__button {
+  font-size: 1.3em;
+  cursor: pointer;
+  padding: 12px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 192, 108, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  border: 2px solid #fff;
+  border-radius: 6px;
+  width: 40%;
+  min-width: 130px;
+  font-weight: 600;
+}
