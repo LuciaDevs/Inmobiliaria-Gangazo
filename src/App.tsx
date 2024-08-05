@@ -1,4 +1,5 @@
 import "./App.css";
+import AdminRegisterTemplate from "./components/templates/AdminRegisterTemplate/AdminRegisterTemplate";
 
 import About from "./views/About/About";
 import Admin from "./views/Admin/Admin";
@@ -11,7 +12,7 @@ import Register from "./views/Register/Register";
 function App() {
   return (
     <>
-      <Home />
+      <AdminRegisterTemplate/>
     </>
   );
 }
