@@ -14,19 +14,19 @@ const NavBar: React.FC<INavBar> = ({ current_link }) => {
       </div>
       <nav className="nav-bar__nav">
         <div className={current_link == "home" ? "current--link" : ""}>
-          <NavLink className="nav-bar__link"  to={"/home"}>
+          <NavLink className="nav-bar__link"  to="/home">
             Home
           </NavLink>
           <span></span>
         </div>
         <div className={current_link == "about" ? "current--link" : ""}>
-          <NavLink className="nav-bar__link"  to={"/about"}>
+          <NavLink className="nav-bar__link"  to="/about">
             About Us
           </NavLink>
           <span></span>
         </div>
         <div className={current_link == "contact" ? "current--link" : ""}>
-        <NavLink className="nav-bar__link"  to={"/contacto"}>
+        <NavLink className="nav-bar__link"  to="/contacto">
             Contact
           </NavLink>
           <span></span>

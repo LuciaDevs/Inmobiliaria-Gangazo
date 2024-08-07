@@ -6,8 +6,10 @@ interface PrivateRouteProps {
   children: ReactNode;
 }
 
-export const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
   const { authState } = useContext(AuthContext);
 
   return authState.logged ? <>{children}</> : <Navigate to="/login" />;
 };
+
+export default PrivateRoute;

@@ -9,8 +9,8 @@ const HomeTemplate: React.FC = () => {
   const [prevFrame, setPrevFrame] = useState<number>(1);
 
   const scrollToNextFrame = () => {
-    let current_frame = currentFrame + 1;
-    let next_frame = nextFrame + 1;
+    const current_frame = currentFrame + 1;
+    const next_frame = nextFrame + 1;
     if (current_frame > 3) {
       setCurrentFrame(3);
     } else {
@@ -24,8 +24,8 @@ const HomeTemplate: React.FC = () => {
   };
 
   const scrollToPrevFrame = () => {
-    let current_frame = currentFrame - 1;
-    let prev_frame = nextFrame - 1;
+    const current_frame = currentFrame - 1;
+    const prev_frame = nextFrame - 1;
     if (current_frame < 1) {
       setCurrentFrame(1);
     } else {
