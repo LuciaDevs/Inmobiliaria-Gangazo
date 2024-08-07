@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 import FormButton from "../../atoms/FormButton/FormButton";
 import FormInputAuth from "../../atoms/FormInputAuth/FormInputAuth";
+import useAuth from "../../hook/userAuth";
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { setAuthState } = useAuth();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +21,10 @@ const LoginForm: React.FC = () => {
         password,
       });
       console.log(response.data);
-      // Manejar la respuesta del servidor aquí
+      const user = { email, roles: response.data.roles };
+      localStorage.setItem("user", JSON.stringify(user));
+      setAuthState({ logged: true, user });
+      navigate("/"); // Redirige a la pantalla de inicio
     } catch (err) {
       setError("Login failed. Please check your credentials and try again.");
       console.error(err);

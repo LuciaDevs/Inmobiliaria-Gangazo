@@ -16,7 +16,7 @@ const Admin: React.FC = () => {
     const fetchAdminData = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/users/admin");
-        setAdminData(response.data); // Ajusta esto según la estructura de los datos que recibas
+        setAdminData(response.data);
         setLoading(false);
       } catch (err) {
         setError("Failed to fetch admin data.");

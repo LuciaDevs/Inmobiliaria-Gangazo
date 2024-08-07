@@ -6,18 +6,17 @@ const HomeTemplate: React.FC = () => {
   const frames = 3;
   const [currentFrame, setCurrentFrame] = useState<number>(1);
   const [nextFrame, setNextFrame] = useState<number>(2);
-  const [prevFrame, setPrevFrame] = useState<number>(1);
 
   const scrollToNextFrame = () => {
     const current_frame = currentFrame + 1;
     const next_frame = nextFrame + 1;
-    if (current_frame > 3) {
-      setCurrentFrame(3);
+    if (current_frame > frames) {
+      setCurrentFrame(frames);
     } else {
       setCurrentFrame(current_frame);
     }
-    if (next_frame > 3) {
-      setNextFrame(3);
+    if (next_frame > frames) {
+      setNextFrame(frames);
     } else {
       setNextFrame(next_frame);
     }
@@ -40,7 +39,7 @@ const HomeTemplate: React.FC = () => {
 
   return (
     <div className="home__container">
-       <NavBar current_link=""/>
+      <NavBar current_link="" />
       <div className="home__left-bar">
         <div className="home__frame-counter">
           <p className="home__current-frame">0{currentFrame}</p>
@@ -66,7 +65,30 @@ const HomeTemplate: React.FC = () => {
             </div>
           </div>
         </section>
+
         <section id="frame2">
+          <div className="home__frame-01">
+            <div className="home__frame-image">
+              <h1>Hello</h1>
+              <p>Price</p>
+              <img src="/images/HomeThree.png" alt="House" />
+            </div>
+          </div>
+          <div className="home__frame-01">
+            <div className="home__frame-image">
+              <p>
+                Este modelo posee amplios espacios de encuentro, para disfrutar
+                entre todos. Cuenta con 3 dormitorios para que cada uno tenga su
+                espacio personalizado y puedan sentir la nueva casa como su
+                lugar en el mundo.
+              </p>
+              <button className="ver__mas">Ver mas</button>
+              <img src="/images/casa.png" alt="House" />
+            </div>
+          </div>
+        </section>
+
+        <section id="frame3">
           <div className="home__frame-01">
             <h1>Casa2</h1>
             <div className="home__frame-image">
@@ -77,24 +99,14 @@ const HomeTemplate: React.FC = () => {
             </div>
           </div>
         </section>
-        <section id="frame3">
-          <div className="home__frame-01">
-            <h1>Cas3</h1>
-            <div className="home__frame-image">
-              <img src="/images/casa.png" alt="House" />
-              <span className="house--offer">
-                <i className="bx bxs-offer"></i>
-              </span>
-            </div>
-          </div>
-        </section>
+        
       </div>
-      <a href={"#frame" + prevFrame} onClick={() => scrollToPrevFrame()}>
+      <a href={"#frame" + currentFrame} onClick={scrollToPrevFrame}>
         <span className="arrow--up">
           <i className="bx bx-chevron-up"></i>
         </span>
       </a>
-      <a href={"#frame" + nextFrame} onClick={() => scrollToNextFrame()}>
+      <a href={"#frame" + nextFrame} onClick={scrollToNextFrame}>
         <span className="arrow--down">
           <i className="bx bx-chevron-down"></i>
         </span>

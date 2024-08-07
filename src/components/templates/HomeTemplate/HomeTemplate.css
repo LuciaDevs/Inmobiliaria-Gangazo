@@ -131,3 +131,30 @@ section {
   font-size: 3em;
   color: rgba(249, 192, 108, 1);
 }
+
+#frame2 .home__frame-01{
+  width: 60%;
+  height: 60%;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #0006;
+  padding: 64px 42px 42px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  gap: 22px;
+}
+
+#frame2 .home__frame-image img {
+  width: 450px;
+  height: 230px;
+  border-radius: 12px;
+}
+.ver__mas{
+  color: #050505;
+  background-color: rgba(249, 192, 108, 1);
+  border-radius: 6px;
+  width: 20%;
+  height: 25px;
+}

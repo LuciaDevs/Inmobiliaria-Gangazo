@@ -4,18 +4,32 @@ import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
 import Home from "./views/Home/Home";
 import Login from "./views/Login/Login";
-import PrivateRoute from "./components/routers/PrivateRoute";
 import Register from "./views/Register/Register";
+import Admin from "./views/Admin/Admin";
+import RequireAuth from "./components/routesProtected/RequiresAuth";
+
+const ROLES = {
+  Admin: "admin",
+  user: "user",
+};
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/about" element={<PrivateRoute><About /></PrivateRoute>} />
-        <Route path="/contact" element={<PrivateRoute><Contact /></PrivateRoute>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
+        
+        <Route element={<RequireAuth allowedRoles={[ROLES.user]} />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+
+        <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
