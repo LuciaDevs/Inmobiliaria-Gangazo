@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import NavBar from "../molecules/NavBar/NavBar";
 import Home from "../../views/Home/Home";
-import AboutTemplate from "../templates/AboutTemplate/AboutTemplate";
-import ContactTemplate from "../templates/ContactTemplate/ContactTemplate";
+import Contact from "../../views/Contact/Contact";
+import About from "../../views/About/About";
 
 
 export const InmobiRouters: React.FC = () => {
@@ -10,18 +10,18 @@ export const InmobiRouters: React.FC = () => {
 
   return (
     <>
-   <NavBar current_link=""/>
+   <NavBar current_link="home"/>
       <div className="container">
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route
             path="/about"
-            element={<AboutTemplate/>}
+            element={<About/>}
           />
 
           <Route
             path="/contacto"
-            element={<ContactTemplate/>}
+            element={<Contact/>}
           />
           <Route path="/" element={<Navigate to="/home" />} />
         </Routes>

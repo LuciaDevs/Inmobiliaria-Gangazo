@@ -6,7 +6,8 @@ import FormComment from "../../atoms/FormComment/FormComment";
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="contact-form__container">
+    <>
+        <div className="contact-form__container">
       <h2 className="contact-form__title">
         ¿Tienes alguna pregunta? Contáctanos y te responderemos a la brevedad
       </h2>
@@ -38,6 +39,8 @@ const ContactForm: React.FC = () => {
         <FormButton label="!CONTACTANOS!" />
       </form>
     </div>
+    </>
+
   );
 };
 

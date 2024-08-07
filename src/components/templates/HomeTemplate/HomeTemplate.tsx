@@ -39,7 +39,7 @@ const HomeTemplate: React.FC = () => {
 
   return (
     <div className="home__container">
-      <NavBar current_link="" />
+      <NavBar current_link="home" />
       <div className="home__left-bar">
         <div className="home__frame-counter">
           <p className="home__current-frame">0{currentFrame}</p>
@@ -69,8 +69,8 @@ const HomeTemplate: React.FC = () => {
         <section id="frame2">
           <div className="home__frame-01">
             <div className="home__frame-image">
-              <h1>Hello</h1>
-              <p>Price</p>
+              <h1>US$ 14.040</h1>
+              <p>+ Financiación en pesos</p>
               <img src="/images/HomeThree.png" alt="House" />
             </div>
           </div>
@@ -90,16 +90,15 @@ const HomeTemplate: React.FC = () => {
 
         <section id="frame3">
           <div className="home__frame-01">
-            <h1>Casa2</h1>
             <div className="home__frame-image">
+              <h1>US$ 14.040</h1>
+              <p>+ Financiación en pesos</p>
               <img src="/images/casa.png" alt="House" />
               <span className="house--offer">
-                <i className="bx bxs-offer"></i>
               </span>
             </div>
           </div>
         </section>
-        
       </div>
       <a href={"#frame" + currentFrame} onClick={scrollToPrevFrame}>
         <span className="arrow--up">

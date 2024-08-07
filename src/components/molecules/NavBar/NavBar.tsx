@@ -26,7 +26,7 @@ const NavBar: React.FC<INavBar> = ({ current_link }) => {
           <span></span>
         </div>
         <div className={current_link == "contact" ? "current--link" : ""}>
-        <NavLink className="nav-bar__link"  to="/contacto">
+        <NavLink className="nav-bar__link"  to="/contact">
             Contact
           </NavLink>
           <span></span>
