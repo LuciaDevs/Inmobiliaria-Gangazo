@@ -40,7 +40,7 @@ const HomeTemplate: React.FC = () => {
 
   return (
     <div className="home__container">
-      <NavBar current_link="home" />
+       <NavBar current_link=""/>
       <div className="home__left-bar">
         <div className="home__frame-counter">
           <p className="home__current-frame">0{currentFrame}</p>

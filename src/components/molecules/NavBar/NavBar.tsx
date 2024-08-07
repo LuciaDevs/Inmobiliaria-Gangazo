@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css";
+import { NavLink } from "react-router-dom";
 
 interface INavBar {
   current_link: string;
@@ -13,21 +14,21 @@ const NavBar: React.FC<INavBar> = ({ current_link }) => {
       </div>
       <nav className="nav-bar__nav">
         <div className={current_link == "home" ? "current--link" : ""}>
-          <a className="nav-bar__link" href="#">
+          <NavLink className="nav-bar__link"  to={"/home"}>
             Home
-          </a>
+          </NavLink>
           <span></span>
         </div>
         <div className={current_link == "about" ? "current--link" : ""}>
-          <a className="nav-bar__link" href="#">
+          <NavLink className="nav-bar__link"  to={"/about"}>
             About Us
-          </a>
+          </NavLink>
           <span></span>
         </div>
         <div className={current_link == "contact" ? "current--link" : ""}>
-          <a className="nav-bar__link" href="#">
+        <NavLink className="nav-bar__link"  to={"/contacto"}>
             Contact
-          </a>
+          </NavLink>
           <span></span>
         </div>
       </nav>

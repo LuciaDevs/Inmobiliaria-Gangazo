@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import AdminRegisterTemplate from "./components/templates/AdminRegisterTemplate/AdminRegisterTemplate";
 
@@ -12,7 +13,14 @@ import Register from "./views/Register/Register";
 function App() {
   return (
     <>
-      <AdminRegisterTemplate/>
+      <Router>
+        <Routes>
+          <Route path="/adminstudents" element={<About />} />
+          <Route path="/adminupfile" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </>
   );
 }
