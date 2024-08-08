@@ -5,10 +5,14 @@ import NavBar from "../../molecules/NavBar/NavBar";
 
 const ContactTemplate: React.FC = () => {
   return (
+    <> 
+    <NavBar current_link="contact"/>
     <div className="contact__container">
-      <NavBar current_link="contact"/>
+      
       <ContactForm />
     </div>
+    </>
+
   );
 };
 

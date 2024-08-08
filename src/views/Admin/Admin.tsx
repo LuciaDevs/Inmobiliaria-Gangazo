@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import AdminTemplate from "../../components/templates/AdminTemplate/Admintemplate";
+import AuthsContext from "../../components/context/AuthProvider";
 
 const Admin: React.FC = () => {
+  const { authState } = useContext(AuthsContext);
   const [adminData, setAdminData] = useState({
     username: "",
     email: "",
@@ -15,7 +17,9 @@ const Admin: React.FC = () => {
   useEffect(() => {
     const fetchAdminData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/users/admin");
+        const response = await axios.get("http://localhost:5000/api/users/admin", {
+          headers: { Authorization: `Bearer ${authState.user?.token}` }
+        });
         setAdminData(response.data);
         setLoading(false);
       } catch (err) {
@@ -25,8 +29,13 @@ const Admin: React.FC = () => {
       }
     };
 
-    fetchAdminData();
-  }, []);
+    if (authState.user?.roles.includes("admin")) {
+      fetchAdminData();
+    } else {
+      setError("Unauthorized access.");
+      setLoading(false);
+    }
+  }, [authState]);
 
   if (loading) {
     return <p>Loading...</p>;
